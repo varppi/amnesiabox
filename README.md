@@ -1,7 +1,6 @@
 # AmnesiaBox
-**Ram only secure static content hosting server written in Go**
+**Minimalistic ram only static content hosting server written in Go.**
 <img width=900 src="https://github.com/user-attachments/assets/b9de2850-f8e1-4dc7-890a-6a62d6e111f2">
-
 
 # Installation & usage
 ```
@@ -9,6 +8,7 @@ git clone https://github.com/R00tendo/amnesiabox
 cd amnesiabox
 go run ./cmd/server/server.go
 ```
+The rest you can figure out on your own.
 
 # Configuration 
 **Method 1 (command line parameters):**
@@ -33,7 +33,12 @@ go run ./cmd/server/server.go
 
 **Method 2 (configuration file):**
 ```
+open=true/false
+hidehosted=true/false
+disablecaptcha=true/false
 listener=127.0.0.1:8080
-open=true
+cert=/path
+key=/path
+password=pass
 sizelimit=1024
 ```

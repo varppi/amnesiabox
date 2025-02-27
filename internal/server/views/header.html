@@ -1,0 +1,9 @@
+<nav style="padding: 10px;" class="gap-1 d-flex flex-row-reverse w-100 bg-dark">
+    <a href="/" class="btn btn-primary">Home</a>
+    {{if .loggedin}}
+        <a href="/dashboard" class="btn btn-success">Dashboard</a>
+        <form action="/dashboard/logout" method="POST">
+            <button class="btn btn-danger">Log Out</button>
+        </form>
+    {{end}}
+</nav>

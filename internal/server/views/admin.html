@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel</title>
+    <link rel="stylesheet" href="/public/css/index.css">
+</head>
+<body data-bs-theme="dark">
+    {{template "header.html" .}}
+    <div class="d-flex justify-content-center mt-5">
+        <div>
+            <h3>Site remover:</h3>
+            <div class="border rounded p-2 row" style="min-width: 250px;">
+                {{range  .sites}}
+                    <b class="col">Site: {{.}}</b>
+                    <form class="col" action="/admin/delete" method="POST">
+                        <input style="display: none;" name="site" value="{{.}}">
+                        <button class="btn btn-danger">Remove</button>
+                    </form>
+                    <hr style="margin-block: 5px;">
+                {{end}}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

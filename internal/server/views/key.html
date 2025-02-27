@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key</title>
+    <link rel="stylesheet" href="/public/css/index.css">
+</head>
+<body data-bs-theme="dark">
+    {{template "header.html" .}}
+    <div class="d-flex justify-content-center mt-5 p-2">
+        <div>
+            <h3 class="text-success text-break">Here's the secret key to your new site, keep it safe:</h3>
+            <b class="text-success text-break">{{.key}}</b>
+            <br>
+            <a href="/" class="mt-3 btn btn-outline-success">return home</a>
+        </div>
+    </div>
+</body>
+</html>

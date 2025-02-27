@@ -1,0 +1,9 @@
+$body-bg-dark: rgb(20, 20, 20);
+
+@import '../bootstrap-5.3.3/scss/bootstrap.scss';
+
+html, body {
+    background-color: $body-bg-dark !important;
+    height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/public/css/index.css">
+</head>
+<body data-bs-theme="dark">
+    {{template "header.html" .}}
+    <div class="d-flex justify-content-center mt-5">
+        <div>
+            <div class="form-control p-2">
+                <h2 class="text-center mb-3">Controls for: {{.site}}</h2>
+                <form action="/dashboard/update" method="POST" enctype="multipart/form-data">
+                    <b>Update:</b><br>
+                    <input accept=".zip" name="file" class="form-control" type="file">
+                    <button class="mt-1 btn btn-warning">Update</button>
+                </form>
+                <form action="/dashboard/delete" method="POST" class="mt-3">
+                    <b>Delete (no warning):</b><br>
+                    <button class="mt-1 btn btn-danger">Delete</button>
+                </form>
+                {{if eq .state 2}}
+                    <br>
+                    <b class="text-success">Successfully updated!</b>
+                {{end}}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
