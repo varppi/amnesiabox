@@ -4,7 +4,7 @@
 
 # Installation & usage
 ```
-git clone https://github.com/R00tendo/amnesiabox
+git clone https://github.com/Varppi/amnesiabox
 cd amnesiabox
 go run ./cmd/server/server.go
 ```
